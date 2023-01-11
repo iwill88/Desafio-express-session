@@ -11,7 +11,9 @@ MongoConnection();
 const MockContenedor =require('./src/mocks/MockContenedor');
 const {normalize, denormalize, schema} = require("normalizr");
 const {inspect} =require('util');
+require('dotenv').config()
 
+const LOGIN_URL = process.env.LOGIN_URL
 
 const session = require('express-session');
 const MongoStore = require('connect-mongo');
@@ -138,7 +140,7 @@ app.use(
   session({
 
     store: new MongoStore({
-      mongoUrl:'mongodb+srv://login:login88@cluster0.jgoashy.mongodb.net/?retryWrites=true&w=majority',
+      mongoUrl: LOGIN_URL,
       ttl: 60,
     }),
 
