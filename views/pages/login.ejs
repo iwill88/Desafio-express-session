@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../partials/head'); %>
+  
+</head>
+<body>
+    <div class="jumbotron">
+<div>
+    <h1 class="text-primary pb-4">Login de Usuario</h1>
+    <form id="login" action="/login" method="post" >
+        <h3>Ingrese su nombre</h3>
+        <div class="d-flex flex-column">
+            <input placeholder="Nombre de usuario" type="text" name="usuario" id="nombre">
+        </div>
+        <div class="pt-2">
+            <input type="submit" value="Enviar" class="btn btn-primary">
+        </div>
+        
+    </form>
+
+</div>
+</div>
+
+
+</body>
+
+</html>

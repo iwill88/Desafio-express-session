@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/socket.io/socket.io.js"></script>
+    
+    <script src="./js/main.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/normalizr@3.6.1/dist/normalizr.browser.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Chat</title>
+</head>
+<body>
+
+    <div class="jumbotron">
+        <h1 class="text-primary pb-4">Ingrese datos</h1>
+        <form class="d-flex flex-column" action="/" method="post">
+          <label>Nombre</label>
+          <input type="text" name="title" placeholder="Ingrese el nombre" id="title">
+          <label>Precio</label>
+          <input type="number" name="price" placeholder="Ingrese el precio" id="price">
+          <label>Foto URL</label>
+          <input type="text" name="thumbnail" placeholder="Ingrese la URL" id="thumbnail">
+          <input type="submit" value="Enviar" class="btn btn-success mt-2 " >
+        </form>
+
+        <h1 class="text-primary pb-4">Vista de productos</h1>
+        <div id="products"></div>
+
+        <h2 class="text-primary pb-4">Centro de mensajes</h2>
+        <div  id="compresion"></div>
+
+      
+        <form id="form">
+             <div class="d-flex flex-column align-items-start ">
+              <input class="mb-2" placeholder="Autor" type="email" name="author" id="email">
+              <input class="mb-2" placeholder="Nombre" type="text" name="firstname" id="firstname">
+              <input class="mb-2" placeholder="Apellido" type="text" name="lastname" id="lastname">
+              <input class="mb-2" placeholder="Edad" type="number" name="age" id="age">
+              <input class="mb-2" placeholder="Alias" type="text" name="nickname" id="nickname">
+              <input class="mb-2" placeholder="Avatar" type="url" name="avatar" id="avatar">
+             </div>
+            
+
+            <div id="messages"></div>
+            <input placeholder="Mensaje" type="text" name="mensaje" id="text">
+            <input type="submit" value="Enviar!" class="btn btn-primary">
+        </form>
+
+        <h2 class="text-primary pb-4">Test de productos</h2>
+
+        <div id="test"></div>
+        
+    
+      </div>
+    
+</body>
+</html>

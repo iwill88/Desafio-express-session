@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../partials/head'); %>
+  <%- include('../partials/scripts'); %>
+</head>
+<body>
+    <div class="jumbotron">
+          <div>
+            <form id="logOut" class="d-flex justify-content-between align-items-center" action="/logout" method="post">
+                <h1 class="text-success pb-4">Bienvenido <%= usuario %></h1>
+                <div>
+                    <input type="submit" value="Desloguear" class="btn btn-warning">
+                </div>
+              
+            </form>
+        
+        </div>
+
+        <h1 class="text-primary pb-4">Ingrese datos</h1>
+        <form class="d-flex flex-column" action="/" method="post">
+          <label>Nombre</label>
+          <input type="text" name="title" placeholder="Ingrese el nombre" id="title">
+          <label>Precio</label>
+          <input type="number" name="price" placeholder="Ingrese el precio" id="price">
+          <label>Foto URL</label>
+          <input type="text" name="thumbnail" placeholder="Ingrese la URL" id="thumbnail">
+          <input type="submit" value="Enviar" class="btn btn-success mt-2 " >
+        </form>
+
+        <h1 class="text-primary pb-4">Vista de productos</h1>
+        <div id="products"></div>
+
+        <h2 class="text-primary pb-4">Centro de mensajes</h2>
+        <div  id="compresion"></div>
+
+      
+        <form id="form">
+             <div class="d-flex flex-column align-items-start ">
+              <input class="mb-2" placeholder="Autor" type="email" name="author" id="email">
+              <input class="mb-2" placeholder="Nombre" type="text" name="firstname" id="firstname">
+              <input class="mb-2" placeholder="Apellido" type="text" name="lastname" id="lastname">
+              <input class="mb-2" placeholder="Edad" type="number" name="age" id="age">
+              <input class="mb-2" placeholder="Alias" type="text" name="nickname" id="nickname">
+              <input class="mb-2" placeholder="Avatar" type="url" name="avatar" id="avatar">
+             </div>
+            
+
+            <div id="messages"></div>
+            <input placeholder="Mensaje" type="text" name="mensaje" id="text">
+            <button class="btn btn-primary" onclick="messageForm()">Enviar!</button>
+  
+        </form>
+
+        <h2 class="text-primary pb-4">Test de productos</h2>
+
+        <div id="test"></div>
+        
+    
+      </div>
+</body>
+</html>
